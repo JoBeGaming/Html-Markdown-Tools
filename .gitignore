@@ -172,3 +172,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# HTML Files
+*.htm
+*.html
+!css_style.html
+
+# Markdown Files
+*.md
+!README.md
