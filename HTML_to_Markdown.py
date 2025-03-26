@@ -9,7 +9,7 @@ def main(file_name):
     except FileNotFoundError: 
         raise FileNotFoundError(f"""File {file_name} not found. Please make sure you have saved your file in the current directory and you have given the correct input.""")
     try:
-        with open(rf"output\{file_name.split(".")[0]}.md", "x") as new_file:
+        with open(rf"output\{file_name.split('.')[0]}.md", "x") as new_file:
             new_file.write("<!--Generated Markdown File-->\n")
             previous_line = ""
             for line in lines: 
