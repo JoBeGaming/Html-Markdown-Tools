@@ -5,7 +5,9 @@ def main(file_name):
     try:
         with open(file_name, "r", errors="strict") as file:
             lines = file.readlines()
-            print(lines)
+        with open(rf"src\inline_style.html", "r") as style:
+            style_list = style.readlines()
+            style.write(style_list)
     except FileNotFoundError: 
         raise FileNotFoundError(f"""File {file_name} not found. Please make sure you have saved your file in the current directory and you have given the correct input.""")
     try:

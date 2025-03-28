@@ -11,6 +11,9 @@ def main(file_name):
     try:
         with open(rf"output\{file_name.split('.')[0]}.md", "x") as new_file:
             new_file.write("<!--Generated Markdown File-->\n")
+            with open(rf"src\inline_style.html", "r") as style:
+                style_list = style.readlines()
+            new_file.write(style_list)
             previous_line = ""
             for line in lines: 
                 convert(new_file, line, previous_line)
