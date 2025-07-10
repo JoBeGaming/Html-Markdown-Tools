@@ -20,7 +20,7 @@ def main(file_name):
                 previous_line = line
     except FileExistsError:
         raise FileExistsError(rf"""File {file_name.split(".")[0]}.md already exists at output\.""")
-    
+
 def convert(new_file, line, previous_line):
     line = line.removesuffix("\n")
     line = line.lstrip(" ")
